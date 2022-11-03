@@ -211,7 +211,17 @@ section {
     border-top: 1px solid lightgray;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 576px) {
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .profile__portrait {
+        float: none;
+    }
+    
     .grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -226,9 +236,3 @@ section {
         font-size: 22px;
       }
 }
-
-
-
-
-
-

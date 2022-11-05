@@ -213,10 +213,12 @@ section {
 
 @media all and (max-width: 600px) {
     .profile, .about-me, .about-me__table, .contact {
-        max-width: 250px;
+        max-width: min-content;
     }   
     .profile__portrait {
-        float: none;
+        clear: both;
+        margin-right: 0;
+        margin-bottom: 50px;
     }
     
     .grid {

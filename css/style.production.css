@@ -102,7 +102,7 @@ a:active {
 
 
 .profile, .about-me, .about-me__table, .contact {
-  max-width: 700px;
+  max-width: 50em;
   margin: 0 auto;
 }
 
@@ -110,8 +110,8 @@ a:active {
   height: 250px;
   width: 250px;
   float: left;
-  margin-right: 40px;
-  margin-bottom: 100px;
+  margin-right: 3em;
+  margin-bottom: 10em;
   border-radius: 50%;
 }
 
@@ -284,7 +284,7 @@ section {
   .profile__portrait {
       clear: both;
       margin-right: 0;
-      margin-bottom: 50px;
+      margin-bottom: 4em;
   }
   
   .grid {

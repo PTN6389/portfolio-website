@@ -83,12 +83,24 @@ projects.forEach(project => {
 (function createTechnologiesFilter() {
     const filter = document.getElementById('filter');
     technologies.forEach(tech => {
-        let option = document.createElement('option');
-        //option style should be dropdown with checkbox to the left
+        let li = document.createElement('li');
+        li.classList.add('filter__item');
+        let input = document.createElement('input');
+        input.type = 'checkbox';
+        input.value = tech;
+        input.id = tech;
+        input.name = 'options';
+        input.classList.add('filter__checkbox');
+        li.appendChild(input);
 
-        option.value = tech;
-        option.text = tech;
-        filter.appendChild(option);
+        let label = document.createElement('label');
+        label.for = tech;
+        label.textContent = tech;
+        label.classList.add('filter__label');
+        li.appendChild(label);
+
+        filter.appendChild(li);
+
     });
 })();
 
@@ -99,13 +111,32 @@ document.querySelector('.dropdown-btn').addEventListener('click', function() {
   
   // Close the dropdown when clicking outside
   window.onclick = function(event) {
-    if (!event.target.matches('.dropdown-btn')) {
+    if (!event.target.matches('.dropdown-btn') && !event.target.matches('.filter__item') && !event.target.matches('.filter__checkbox') && !event.target.matches('.filter__label')) {
       const dropdowns = document.querySelectorAll('.dropdown-list');
       dropdowns.forEach(function(dropdown) {
         dropdown.style.display = 'none';
       });
     }
   };
+
+// Filter projects based on selected technologies
+document.querySelector('#filter').addEventListener('change', function(e) {
+    const selectedTechs = Array.from(document.querySelectorAll('.filter__checkbox:checked')).map(checkbox => checkbox.value);
+    const projects = document.querySelectorAll('.grid__item');
+    projects.forEach(project => {
+        const projectTechs = Array.from(project.querySelectorAll('span')[0].textContent.split(',').map(tech => tech.trim()));
+        if(selectedTechs.length === 0) {
+            project.style.display = 'block';
+        } else {
+            if(selectedTechs.some(tech => projectTechs.includes(tech))) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        }
+    });
+});
+
     
 (function() {
     let form = document.querySelector('#contact-form');

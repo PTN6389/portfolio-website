@@ -51,7 +51,6 @@ h3 {
     width: 100%;
     padding: 20px;
     border-bottom: 1px solid lightgray;
-    margin-bottom: 100px;
     align-items: center;
 }
 
@@ -118,7 +117,7 @@ a:active {
 
 .profile, .about-me, .about-me__table, .contact {
     max-width: 50em;
-    margin: 0 auto;
+    margin: 5em auto;
 }
 
 .profile__portrait {
@@ -251,17 +250,20 @@ section {
 /* Filter dropdown */
 .custom-dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
   }
   
   .dropdown-btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
     padding: 10px;
-    border: none;
+    border: none; 
     cursor: pointer;
     width: 200px;
-    text-align: left;
+    text-align: center;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+    margin-bottom: 10px;
   }
   
   .dropdown-list {
@@ -269,11 +271,14 @@ section {
     position: absolute;
     background-color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    min-width: 200px;
+    min-width: 300px;
+    max-height: 500px;
     z-index: 1;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    top: 90%;
+    overflow: auto;
   }
   
   .dropdown-list li {

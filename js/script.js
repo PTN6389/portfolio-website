@@ -20,7 +20,8 @@ const projects = [
         screenshot: '',
         description: 'React client-side code for an app called myFlix based on the existing Movie API server-side code (REST API and database).',
         technologies: ['React', 'Parcel', 'Bootstrap', 'React Redux', 'Netlify'],
-        liveLink: 'https://myflix-ptn.netlify.app/',
+        //liveLink: 'https://myflix-ptn.netlify.app/',
+        liveLink: '',
         sourceLink: 'https://github.com/PTN6389/myFlix-client'  
     },
     {
@@ -28,7 +29,8 @@ const projects = [
         screenshot: '',
         description: 'Serverless, progressive web application (PWA) with React using a test-driven development (TDD) technique. The application uses the Google Calendar API to fetch upcoming events.',
         technologies: ['React', 'Test Driven Development(TDD) using Jest', 'AWS Lambda serverless function'],
-        liveLink: 'https://ptn6389.github.io/meet/',
+        //liveLink: 'https://ptn6389.github.io/meet/',
+        liveLink: '',
         sourceLink: 'https://github.com/PTN6389/meet'
     },
     {
@@ -44,8 +46,25 @@ const projects = [
         screenshot: '',
         description: 'Angular client-side for an application called myFlix based on the existing Movie API server-side code (REST API and database).',
         technologies: ['Angular', 'Angular Material Design', 'TypeDoc', 'JSDoc'],
-        liveLink: 'https://ptn6389.github.io/myFlix-Angular-client/welcome',
+        //liveLink: 'https://ptn6389.github.io/myFlix-Angular-client/welcome',
+        liveLink: '',
         sourceLink: 'https://github.com/PTN6389/myFlix-Angular-client'  
+    },
+    {
+        title: 'QR Code Component',
+        screenshot: '',
+        description: 'This is a solution to the <a href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H" target="_blank">QR code component challenge</a> on Frontend Mentor. This simple UI utilizes HTML and CSS to display a card with a QR code, title, and text.',
+        technologies: ['HTML', 'CSS'],
+        liveLink: 'https://ptn6389.github.io/qr-code-component/',
+        sourceLink: 'https://github.com/PTN6389/qr-code-component'  
+    },
+    {
+        title: 'Blog Preview Card',
+        screenshot: '',
+        description: 'This is a solution to the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). This UI utilizes HTML and CSS to display a blog card with image, classification button, published date, title, text, avatar image, and author.',
+        technologies: ['HTML', 'CSS'],
+        liveLink: 'https://ptn6389.github.io/blog-preview-card/',
+        sourceLink: 'https://github.com/PTN6389/blog-preview-card'  
     }
 ]
 
@@ -54,7 +73,7 @@ const technologies = [];
 projects.forEach(project => {
     let projectElement = document.createElement('div');
     projectElement.classList.add('grid__item');
-    projectElement.innerHTML = `    
+    projectElement.innerHTML = `   
         <h3>${project.title}</h3>
         <p>${project.description}</p>
         <p><a href="${project.liveLink}" target="_blank">Live Demo</a></p>

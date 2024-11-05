@@ -99,9 +99,8 @@ a {
     color: var(--primary-link-color);
 }
 
-a:hover, a:focus {
-    /*no underline when hover over link*/
-    text-decoration: none;
+a:hover {
+    font-weight: 900;
 }
 
 a:visited {
